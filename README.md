@@ -7,15 +7,15 @@
 	- Carlos Roberto Medeiros de Lima
 	
 <p align="center">
-  <img src= "https://github.com/CarlosRobertoMedeiros/study-microservice-springcloud-3/draw-io/implementation-spring-cloud-microservice-3.png" />
+  <img src= "https://github.com/CarlosRobertoMedeiros/study-microservice-springcloud-3/implementation-spring-cloud-microservice-3.png" />
 </p>
 
 ## General
 	
-	### Draw.io Arch
+	- Draw.io Arch
 		implementation-spring-cloud-microservice-3
 	
-	### Postman Collections
+	- Postman Collections
 		microservice-cloud-3
 		microservice-cloud-3-mock
 
