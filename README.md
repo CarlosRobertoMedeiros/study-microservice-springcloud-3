@@ -7,7 +7,7 @@
 	- Carlos Roberto Medeiros de Lima
 	
 <p align="center">
-  <img src= "https://github.com/CarlosRobertoMedeiros/study-microservice-springcloud-3/implementation-spring-cloud-microservice-3.png" />
+  <img src= "https://github.com/CarlosRobertoMedeiros/study-microservice-springcloud-3/blob/master/draw-io/implementation-spring-cloud-microservice-3.png" />
 </p>
 
 ## General
