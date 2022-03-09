@@ -55,7 +55,12 @@
 					]
 				},
 				{
-					"name": "getUserById-PathVariable",
+					"name": "getUserById-PathVariable-json",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -78,7 +83,7 @@
 					},
 					"response": [
 						{
-							"name": "getUserById-PathVariable",
+							"name": "getUserById-PathVariable-json",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -105,7 +110,7 @@
 							"header": [
 								{
 									"key": "Date",
-									"value": "Tue, 08 Mar 2022 03:51:32 GMT"
+									"value": "Tue, 08 Mar 2022 13:38:01 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -165,7 +170,199 @@
 									"expires": "Invalid Date"
 								}
 							],
-							"body": "{\n    \"email\": \"test@test.com\",\n    \"firstName\": \"Carlos\",\n    \"lastName\": \"Lima\",\n    \"userId\": null\n}"
+							"body": "{\n    \"email\": \"pedro@test.com\",\n    \"firstName\": \"Pedro\",\n    \"lastName\": \"Antonio\",\n    \"userId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserById-PathVariable-xml",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/{{userId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUserById-PathVariable-xml",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/users/{{userId}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"{{userId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 09 Mar 2022 00:39:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/xml; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=71207f5a29346ea2"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=ce097c33773bbc92"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1646711552"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "<UserRest>\n    <email>test@test.com</email>\n    <firstName>Carlos</firstName>\n    <lastName>Lima</lastName>\n    <userId/>\n</UserRest>"
+						}
+					]
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Luciene\",\r\n    \"lastName\": \"Lima\",\r\n    \"email\": \"lucy.lima@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Luciene\",\r\n    \"lastName\": \"Lima\",\r\n    \"email\": \"lucy.lima@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\n    \"email\": \"lucy.lima@test.com\",\n    \"firstName\": \"Luciene\",\n    \"lastName\": \"Lima\",\n    \"userId\": null\n}"
 						}
 					]
 				}
