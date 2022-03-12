@@ -1,8 +1,6 @@
 package com.roberto.app.ws.mobile.app.ws.ui.controllers;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 import javax.validation.Valid;
 
@@ -20,12 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.roberto.app.ws.mobile.app.ws.exceptions.UserServiceException;
 import com.roberto.app.ws.mobile.app.ws.ui.model.request.UpdateUserDetailsRequestModel;
 import com.roberto.app.ws.mobile.app.ws.ui.model.request.UserDetailsRequestModel;
 import com.roberto.app.ws.mobile.app.ws.ui.model.response.UserRest;
 import com.roberto.app.ws.mobile.app.ws.userservice.UserService;
-import com.roberto.app.ws.mobile.app.ws.userservice.impl.UserServiceImpl;
 
 @RestController
 @RequestMapping(value = "users")
