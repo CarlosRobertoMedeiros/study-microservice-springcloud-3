@@ -1,0 +1,61 @@
+server:
+  port: 8201
+
+eureka:
+  #instance:
+    #instance-id: ${spring.application.name}-${random.uuid} 
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka
+
+spring:
+  application:
+    name: api-gateway-ws
+
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: http://localhost:8180/auth/realms/microservices-realm
+
+
+#Manual and Automatic Routes
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes[0]:
+        id: users-status-check
+        uri: lb://users-ws
+        predicates[0]: Path=/users-ws/users/status/check
+        predicates[1]: Method=GET
+        filters[0]: RemoveRequestHeader=Cookie
+        #filters[1]: RewritePath=/users-ws/users/(?<segment>.*), /$\{segment}
+
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#      routes:
+#      - id: hr-worker
+#        uri: lb://hr-worker
+#        predicates:
+#        - Path=/hr-worker/**
+#      - id: hr-payroll
+#        uri: lb://hr-payroll
+#        predicates:
+#        - Path=/hr-payroll/**
+#      - id: hr-user
+#        uri: lb://hr-user
+#        predicates:
+#        - Path=/hr-user/**
+#      - id: hr-oauth
+#        uri: lb://hr-oauth
+#        predicates:
+#        - Path=/hr-oauth/**
+
+
