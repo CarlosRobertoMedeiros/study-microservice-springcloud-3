@@ -7,8 +7,8 @@ spring:
     name: users-ws
 
 eureka:
+  instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}  
   client:
-    instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     serviceUrl:
       defaultZone: http://localhost:8010/eureka
