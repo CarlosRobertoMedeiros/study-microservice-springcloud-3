@@ -19,3 +19,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka
+
+gateway:
+  ip: 192.168.2.81

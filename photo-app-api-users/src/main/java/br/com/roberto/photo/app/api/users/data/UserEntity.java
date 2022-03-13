@@ -30,7 +30,7 @@ public class UserEntity implements Serializable {
 
 	@Column(nullable = false, unique = true)
 	private String userId;
-
+	
 	@Column(nullable = false, unique = true)
 	private String encryptedPassword;
 
@@ -73,7 +73,7 @@ public class UserEntity implements Serializable {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-
+	
 	public String getEncryptedPassword() {
 		return encryptedPassword;
 	}
