@@ -1,3 +1,7 @@
+![GitHub top language]
+(https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+(https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
+(https://img.shields.io/badge/SPRING%20BOOT-2.6.4-brightgreen)
 # study-microservice-springcloud-with-aws
 
 ## Project Arch
@@ -20,9 +24,26 @@
 		microservice-cloud-3-mock
 
 ## Environment
-	For Ms Execution
-	 in mobile-app-ws	
-		for windows: mvnw.cmd spring-boot:run
+	For Execution Services Order
+		- photo-app-discovery-server
+		- api-gateway-ws
+		- mobile-app-ws
+		- photo-app-api-users
+		- photo-app-api-account-managment
+		
+	 Example: 
+		for windows: mvnw.cmd spring-boot:run for each one directory
 
+## Service Discovery
+	photo-app-discovery-server
+
+## Gateway
+	api-gateway-ws
+	
 ## MicroServices
 	mobile-app-ws
+	photo-app-api-users
+	photo-app-api-account-managment
+	
+	
+	

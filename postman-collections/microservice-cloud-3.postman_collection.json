@@ -183,6 +183,38 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "users-by-gateway",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Antonio\",\r\n    \"lastName\": \"Nunes\",\r\n    \"email\": \"antonio2.nunes@test.com\",\r\n    \"password\": \"vaidartudocerto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{env_gateway}}/{{env_gateway_ms_users}}/users",
+							"host": [
+								"{{env_gateway}}"
+							],
+							"path": [
+								"{{env_gateway_ms_users}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
