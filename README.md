@@ -1,5 +1,5 @@
 ![GitHub top language](https://img.shields.io/badge/SPRING%20BOOT-2.6.4-brightgreen)
-![GitHub top language](https://img.shields.io/badge/APP-RELEASE-1.0.0-blue)
+![GitHub top language](https://img.shields.io/badge/APP%20RELEASE-1.0.0-blue)
 # study-microservice-springcloud-with-aws
 
 ## Project Arch
